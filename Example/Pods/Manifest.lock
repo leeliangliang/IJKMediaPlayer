@@ -1,0 +1,20 @@
+PODS:
+  - IJKMediaPlayer (0.1.0):
+    - IJKMediaPlayer/Lite (= 0.1.0)
+    - IJKMediaPlayer/SSL (= 0.1.0)
+  - IJKMediaPlayer/Lite (0.1.0)
+  - IJKMediaPlayer/SSL (0.1.0)
+
+DEPENDENCIES:
+  - IJKMediaPlayer (from `../`)
+
+EXTERNAL SOURCES:
+  IJKMediaPlayer:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  IJKMediaPlayer: b531682b338b44d6b7ee88ac77d5e56e25c80a87
+
+PODFILE CHECKSUM: 3ff6ed472f9de6d7127e64045727d39dacbdaec6
+
+COCOAPODS: 1.6.1

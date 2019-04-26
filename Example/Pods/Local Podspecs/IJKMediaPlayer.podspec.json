@@ -1,0 +1,53 @@
+{
+  "name": "IJKMediaPlayer",
+  "version": "0.1.0",
+  "summary": "A short description of IJKMediaPlayer.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/李亮/IJKMediaPlayer",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "李亮": "554166037@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/李亮/IJKMediaPlayer.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "frameworks": [
+    "MediaPlayer",
+    "QuartzCore",
+    "CoreGraphics",
+    "CoreTelephony",
+    "AudioToolbox",
+    "Accelerate",
+    "VideoToolbox",
+    "CoreAudio",
+    "OpenGLES"
+  ],
+  "libraries": [
+    "z",
+    "iconv",
+    "bz2",
+    "stdc++"
+  ],
+  "default_subspecs": [
+    "Lite",
+    "SSL"
+  ],
+  "subspecs": [
+    {
+      "name": "Lite",
+      "vendored_frameworks": "IJKMediaPlayer/IJKMediaFramework.framework"
+    },
+    {
+      "name": "SSL",
+      "vendored_frameworks": "IJKMediaPlayer/IJKMediaFramework.framework",
+      "vendored_libraries": "IJKMediaPlayer/ssl/*.a"
+    }
+  ]
+}

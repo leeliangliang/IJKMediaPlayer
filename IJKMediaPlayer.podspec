@@ -27,16 +27,18 @@ TODO: Add long description of the pod here.
   s.author           = { '李亮' => '554166037@qq.com' }
   s.source           = { :git => 'https://github.com/李亮/IJKMediaPlayer.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
   s.ios.deployment_target = '8.0'
+  s.frameworks = 'MediaPlayer', 'QuartzCore', 'CoreGraphics', 'CoreTelephony', 'AudioToolbox', 'Accelerate' , 'VideoToolbox', 'CoreAudio', 'OpenGLES'
+  s.libraries  = 'z', 'iconv', 'bz2', 'stdc++'
+  s.default_subspec = 'Lite', 'SSL'
 
-  s.source_files = 'IJKMediaPlayer/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'IJKMediaPlayer' => ['IJKMediaPlayer/Assets/*.png']
-  # }
+  s.subspec 'Lite' do |ls|
+    ls.vendored_frameworks = 'IJKMediaPlayer/IJKMediaFramework.framework'
+  end
+  #添加ssl支持
+  s.subspec 'SSL' do |ss|
+    ss.vendored_frameworks = 'IJKMediaPlayer/IJKMediaFramework.framework'
+    ss.vendored_libraries = 'IJKMediaPlayer/ssl/*.a'
+  end
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
